@@ -1,0 +1,514 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>For Cherrie ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Trebuchet MS", sans-serif;
+    color: white;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, #5c174d 0%, transparent 30%),
+        radial-gradient(circle at 80% 30%, #73175f 0%, transparent 30%),
+        radial-gradient(circle at 50% 100%, #a52c67 0%, transparent 35%),
+        linear-gradient(180deg, #100819, #210d27 50%, #160918);
+}
+
+/* STARS */
+
+.star {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: .8;
+    animation: twinkle 2s infinite alternate;
+    z-index: 0;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: .2;
+        transform: scale(.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+/* MAIN */
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 35px 18px 60px;
+    text-align: center;
+}
+
+/* HEADER */
+
+.small-title {
+    color: #ffb5df;
+    font-size: 20px;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin-top: 5px;
+    font-family: cursive;
+    font-size: clamp(55px, 15vw, 110px);
+    color: #ff72c4;
+
+    text-shadow:
+        0 0 10px #ff2fa9,
+        0 0 25px #ff2fa9,
+        0 0 50px #ff2fa9;
+}
+
+.subtitle {
+    font-size: 25px;
+    color: #ffd1ed;
+    margin-top: -5px;
+}
+
+/* PHOTOS */
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 30px auto;
+    max-width: 650px;
+}
+
+.photo {
+    background: #fff;
+    padding: 8px 8px 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    transform: rotate(-3deg);
+    transition: .4s;
+}
+
+.photo:nth-child(2) {
+    transform: rotate(4deg);
+}
+
+.photo:nth-child(3) {
+    transform: rotate(3deg);
+}
+
+.photo:nth-child(4) {
+    transform: rotate(-4deg);
+}
+
+.photo:hover {
+    transform: rotate(0deg) scale(1.04);
+}
+
+.photo img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+@media(max-width: 500px) {
+    .photo img {
+        height: 190px;
+    }
+}
+
+/* LETTER */
+
+.letter {
+    position: relative;
+    margin: 35px auto;
+    max-width: 700px;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.96),
+            rgba(255,221,239,.96)
+        );
+
+    color: #3d1936;
+    padding: 35px 25px 45px;
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.45),
+        0 0 30px rgba(255,105,190,.25);
+
+    text-align: left;
+}
+
+.letter:before {
+    content: "♥";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #ff4fac;
+    color: white;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    font-size: 23px;
+}
+
+.letter h2 {
+    text-align: center;
+    color: #b72878;
+    font-family: cursive;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.letter p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.signature {
+    text-align: right;
+    font-family: cursive;
+    font-size: 25px;
+    color: #d93691;
+}
+
+/* QUESTION */
+
+.question {
+    margin-top: 40px;
+}
+
+.question h2 {
+    font-family: cursive;
+    color: #ff9bd5;
+    font-size: clamp(32px, 8vw, 55px);
+
+    text-shadow:
+        0 0 10px #ff3cae;
+}
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+    padding: 16px 38px;
+    border-radius: 50px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.3);
+}
+
+.yes {
+    background: linear-gradient(135deg, #ff3c9d, #ff76c7);
+    color: white;
+}
+
+.always {
+    background: #ffd2ec;
+    color: #9d286d;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+/* ANSWER */
+
+#answer {
+    display: none;
+    margin-top: 30px;
+
+    font-family: cursive;
+    font-size: clamp(35px, 9vw, 65px);
+
+    color: #ff8dce;
+
+    text-shadow:
+        0 0 10px #ff3cae,
+        0 0 30px #ff3cae;
+}
+
+#answer small {
+    display: block;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 17px;
+    color: #ffd5ed;
+    margin-top: 10px;
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ff70c1;
+    font-size: 25px;
+    animation: floatUp 6s linear forwards;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    margin-top: 50px;
+    color: #ffb9df;
+    font-size: 16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- STARS -->
+<div class="star" style="top:8%;left:12%"></div>
+<div class="star" style="top:15%;left:78%"></div>
+<div class="star" style="top:30%;left:92%"></div>
+<div class="star" style="top:42%;left:8%"></div>
+<div class="star" style="top:55%;left:85%"></div>
+<div class="star" style="top:70%;left:15%"></div>
+<div class="star" style="top:80%;left:75%"></div>
+<div class="star" style="top:90%;left:40%"></div>
+
+<div class="container">
+
+    <div class="small-title">
+        To My Beautiful
+    </div>
+
+    <h1>Cherrie ❤️</h1>
+
+    <div class="subtitle">
+        I love you so much 💗
+    </div>
+
+
+    <!-- PHOTOS -->
+
+    <div class="photos">
+
+        <div class="photo">
+            <img src="cherrie1.jpeg">
+        </div>
+
+        <div class="photo">
+            <img src="cherrie2.jpeg">
+        </div>
+
+        <div class="photo">
+            <img src="cherrie3.jpeg">
+        </div>
+
+        <div class="photo">
+            <img src="cherrie4.jpeg">
+        </div>
+
+    </div>
+
+
+    <!-- LOVE LETTER -->
+
+    <div class="letter">
+
+        <h2>For You, Cherrie ❤️</h2>
+
+        <p>
+            Cherrie, you are one of the most special
+            people in my life.
+        </p>
+
+        <p>
+            You make my days brighter, my heart happier,
+            and my world so much better just by being
+            there.
+        </p>
+
+        <p>
+            I am so grateful for every laugh, every
+            conversation, every memory, and every moment
+            we share.
+        </p>
+
+        <p>
+            I love you so much — more than I can explain
+            with words. You mean so much to me, and I
+            want to keep choosing you every day.
+        </p>
+
+        <p>
+            No matter what happens, I want you to know
+            that you will always have a special place
+            in my heart. ❤️
+        </p>
+
+        <div class="signature">
+            Always yours,
+            <br>
+            ❤️
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION -->
+
+    <div class="question">
+
+        <h2>
+            Will you love me forever? ❤️
+        </h2>
+
+        <div class="buttons">
+
+            <button class="yes"
+                    onclick="sayYes()">
+                ❤️ Yes
+            </button>
+
+            <button class="always"
+                    onclick="sayYes()">
+                💕 Always
+            </button>
+
+        </div>
+
+        <div id="answer">
+            I will love you always ❤️
+
+            <small>
+                Today, tomorrow, and every day after.
+            </small>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        Made with all my love for Cherrie 💗
+    </div>
+
+</div>
+
+
+<script>
+
+/* YES BUTTON */
+
+function sayYes() {
+
+    document.querySelector(".question h2").innerHTML =
+        "You just made me the happiest person ❤️";
+
+    document.querySelector(".buttons").style.display =
+        "none";
+
+    document.getElementById("answer").style.display =
+        "block";
+
+    for(let i = 0; i < 35; i++) {
+        setTimeout(createHeart, i * 80);
+    }
+}
+
+
+/* FLOATING HEARTS */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        ["❤️","💗","💕","💖","💘"][Math.floor(Math.random()*5)];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (18 + Math.random() * 25) + "px";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+
+/* NORMAL HEARTS */
+
+setInterval(createHeart, 900);
+
+</script>
+
+</body>
+</html>
